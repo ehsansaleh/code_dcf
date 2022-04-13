@@ -14,8 +14,10 @@ function gdluntar {
   MYURL=$3
   PTHMD5FILE=$4
   RMAFTERDL=$5
+  ISSMALL=$6
   
   [[ "aa"$RMAFTERDL == "aa" ]] && echo "args incomplete" && return 1
+  [[ "aa"$ISSMALL == "aa" ]] && ISSMALL=0
 
   if md5sum -c ${PTHMD5FILE} 2> /dev/null; then
     :
@@ -24,8 +26,11 @@ function gdluntar {
     echo "Attempting a fresh download..."
     echo "Downloading: $MYURL -> $(readlink -m $MYTARFILE)"
     sleep 0.5
-
-    wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id='${MYFILEID} -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=${MYFILEID}" -O ${MYTARFILE} && rm -rf /tmp/cookies.txt
+    if [[ $ISSMALL == "1" ]]; then
+      wget --no-check-certificate 'https://docs.google.com/uc?export=download&id='"${MYFILEID}" -O ${MYTARFILE} 
+    else
+      wget --load-cookies /tmp/cookies.txt "https://docs.google.com/uc?export=download&confirm=$(wget --quiet --save-cookies /tmp/cookies.txt --keep-session-cookies --no-check-certificate 'https://docs.google.com/uc?export=download&id='${MYFILEID} -O- | sed -rn 's/.*confirm=([0-9A-Za-z_]+).*/\1\n/p')&id=${MYFILEID}" -O ${MYTARFILE} && rm -rf /tmp/cookies.txt
+    fi
 
     if [[ ! -f $MYTARFILE ]]; then
       echo "Downloading Error: could not download the file $MYTARFILE."
