@@ -16,4 +16,5 @@ FILENAME="features.tar"
 GDRIVEURL="https://drive.google.com/file/d/1nf_WeD7fcEAu2BLD-FLfKRaAtcoseSoO/view?usp=sharing"
 PTHMD5FILE="features.md5"
 REMOVETARAFTERDL="1"
-gdluntar ${FILEID} ${FILENAME} ${GDRIVEURL} ${PTHMD5FILE} ${REMOVETARAFTERDL}
+ISSMALL="0"
+gdluntar ${FILEID} ${FILENAME} ${GDRIVEURL} ${PTHMD5FILE} ${REMOVETARAFTERDL} ${ISSMALL}
