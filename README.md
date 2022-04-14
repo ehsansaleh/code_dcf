@@ -1,5 +1,5 @@
 # Firth Bias Reduction in Few-shot Distribution Calibration
-This sub-directory contains the experiments in which Firth bias reduction from our paper [On the Importance of Firth Bias Reduction in Few-Shot Classification](https://openreview.net/pdf?id=DNRADop4ksB) is applied to the recent State-of-the-Art [Distribution Calibration (DC)](https://openreview.net/pdf?id=JWOiYxMG92s) method in few-shot classification.
+This sub-directory contains the experiments in which Firth bias reduction from our paper [On the Importance of Firth Bias Reduction in Few-Shot Classification](https://openreview.net/pdf?id=DNRADop4ksB) is applied to the recent State-of-the-Art [Distribution Calibration (DC)](https://openreview.net/pdf?id=JWOiYxMG92s) method in few-shot classification. This is one of the three code repositories of our paper, and is a sub-module of the the main ["Firth Bias Reduction in Few-Shot Learning" repository](https://github.com/ehsansaleh/firth_bias_reduction). 
 
 <details open>
 <summary><h2>Check Out Our GPU Implementation of the DC Method</h2></summary>
@@ -191,8 +191,19 @@ Following our step-by-step guide, you can produce the following tables.
 +  <details>
    <summary><strong>Cloning the Repo</strong></summary>
 
-   1. `git clone https://github.com/ehsansaleh/firth_bias_reduction.git`
-   2. `cd ./firth_bias_reduction/code_dcf`
+   +  <details open>
+      <summary><strong>[Option 1] Cloning All Three Repositories of Our Paper</strong></summary>
+ 
+      1. `git clone --recursive https://github.com/ehsansaleh/firth_bias_reduction.git`
+      2. `cd firth_bias_reduction/code_dcf`
+      </details>
+ 
+   +  <details>
+      <summary><strong>[Option 2] Cloning This Repository Alone</strong></summary>
+ 
+      1. `git clone https://github.com/sabagh1994/code_dcf.git`
+      2. `cd code_dcf`
+      </details>
 
    </details>
    
