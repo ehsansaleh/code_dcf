@@ -74,7 +74,7 @@ Following our step-by-step guide, you can produce the following tables.
       * This table was generated at [`tables/5ways_mini_tiered.csv`](./tables/5ways_mini_tiered.csv).
       * The relavant configs for this table can be found at the [`configs/4_5ways`](./configs/4_5ways) directory.
       * For mini-imagenet, the results are either in a statistical tie or slightly better than the values reported in the [Few-shot Distribution Calibration paper](https://openreview.net/pdf?id=JWOiYxMG92s).
-      * For tiered-imagenet, we could not reproduce the DC paper's numbers. While we [reported this mismatch](https://github.com/ShuoYang-1998/Few_Shot_Distribution_Calibration/issues/30) to the DC paper authors, the issue has not been resolved yet at the time of writing. 
+      * For tiered-imagenet, we could not reproduce the DC paper's numbers. While we [reported this mismatch](https://github.com/ShuoYang-1998/Few_Shot_Distribution_Calibration/issues/30) to the DC paper authors, the issue has not been resolved yet at the time of writing. (**Update**: The DC authors closed the entire issues section on their github repository, so we may never get the answer).
         * Apparently, the tiered-ImageNet results were added to the DC paper in the rebuttals period.
         * Since the original code was not updated after the rebuttals, the original DC repository cannot run the tiered-Imagenet experiments as-is, and there are a few missing lines of code which may be the key to this difference.
         * As soon as we hear back from the DC authors, we will try to update our code accordingly.
