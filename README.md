@@ -1,7 +1,7 @@
 # Firth Bias Reduction in Few-shot Distribution Calibration
 This sub-directory contains the experiments in which Firth bias reduction from our paper [On the Importance of Firth Bias Reduction in Few-Shot Classification](https://openreview.net/pdf?id=DNRADop4ksB) is applied to the recent State-of-the-Art [Distribution Calibration (DC)](https://openreview.net/pdf?id=JWOiYxMG92s) method in few-shot classification. This is one of the three code repositories of our paper, and is a sub-module of the the main ["Firth Bias Reduction in Few-Shot Learning" repository](https://github.com/ehsansaleh/firth_bias_reduction). 
 
-For a concise and informal description of our work, check out our paper's website: [https://sabagh1994.github.io/firthfsl](https://sabagh1994.github.io/firthfsl)
+For a concise and informal description of our work, check out our paper's website: [https://ehsansaleh.github.io/firthfsl](https://ehsansaleh.github.io/firthfsl)
 
 <details open>
 <summary><h2>Check Out Our GPU Implementation of the DC Method</h2></summary>
